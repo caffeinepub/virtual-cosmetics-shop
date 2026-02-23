@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1rem;
+        /* Warm coral and peach palette for light mode */
+        --background: 0.98 0.01 30;
+        --foreground: 0.2 0.02 25;
+        --card: 1 0.005 35;
+        --card-foreground: 0.2 0.02 25;
+        --popover: 1 0.005 35;
+        --popover-foreground: 0.2 0.02 25;
+        --primary: 0.65 0.18 25;
+        --primary-foreground: 0.98 0.01 30;
+        --secondary: 0.92 0.04 40;
+        --secondary-foreground: 0.3 0.03 25;
+        --muted: 0.94 0.02 35;
+        --muted-foreground: 0.5 0.02 25;
+        --accent: 0.88 0.08 35;
+        --accent-foreground: 0.25 0.03 25;
+        --destructive: 0.55 0.22 15;
+        --destructive-foreground: 0.98 0.01 30;
+        --border: 0.88 0.03 30;
+        --input: 0.88 0.03 30;
+        --ring: 0.65 0.18 25;
+        --chart-1: 0.65 0.18 25;
+        --chart-2: 0.72 0.15 35;
+        --chart-3: 0.58 0.20 20;
+        --chart-4: 0.80 0.12 40;
+        --chart-5: 0.68 0.16 30;
+    }
+
+    .dark {
+        /* Warm dark mode with rose gold accents */
+        --background: 0.15 0.02 25;
+        --foreground: 0.95 0.01 30;
+        --card: 0.20 0.02 25;
+        --card-foreground: 0.95 0.01 30;
+        --popover: 0.18 0.02 25;
+        --popover-foreground: 0.95 0.01 30;
+        --primary: 0.75 0.15 30;
+        --primary-foreground: 0.15 0.02 25;
+        --secondary: 0.28 0.03 25;
+        --secondary-foreground: 0.95 0.01 30;
+        --muted: 0.25 0.02 25;
+        --muted-foreground: 0.65 0.02 25;
+        --accent: 0.35 0.05 30;
+        --accent-foreground: 0.95 0.01 30;
+        --destructive: 0.60 0.20 15;
+        --destructive-foreground: 0.95 0.01 30;
+        --border: 0.30 0.02 25;
+        --input: 0.30 0.02 25;
+        --ring: 0.75 0.15 30;
+        --chart-1: 0.75 0.15 30;
+        --chart-2: 0.68 0.18 35;
+        --chart-3: 0.82 0.12 25;
+        --chart-4: 0.60 0.20 40;
+        --chart-5: 0.72 0.16 28;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold;
+        letter-spacing: -0.02em;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}

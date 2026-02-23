@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Main actor implementing a cosmetics shop with 50 Gorilla Tag themed items, user balance management (default 100, periodic income via timer), purchase logic, inventory tracking, and an admin code (2807) to grant 50M funds.",
+  "backend/migration.mo": "Migration module that preserves user state (balance and inventory) across canister upgrades by passing through the existing users map.",
+  "feature_evidence.json": "Feature evidence report documenting the frontend shop interface update for Gorilla Tag themed cosmetics, listing affected components and test IDs with high confidence.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of all frontend TypeScript/React components, hooks, and styling files describing the shop UI, balance display, purchase flow, admin functionality, and Gorilla Tag themed cosmetics presentation.",
+  "frontend/index.css": "Tailwind CSS base layer defining OKLCH color variables for light and dark modes with warm coral, peach, and rose gold palette avoiding blue/purple tones.",
+  "frontend/index.html": "HTML entry point with root div and module script loading the React application titled 'Virtual Cosmetics Shop'.",
+  "frontend/src/App.tsx": "Root React component with tab navigation between Shop and Owned Items views, user initialization on mount, header with branding, footer with admin box and caffeine.ai attribution, and toast notifications.",
+  "frontend/src/components/AdminBox.tsx": "Discreet admin code input form (opacity 30%, hover 100%) that submits numeric codes to grant funds via the backend admin function.",
+  "frontend/src/components/BalanceDisplay.tsx": "Card component displaying user's balance with currency icon, formatted number, gradient styling, and glow effect.",
+  "frontend/src/components/CosmeticItem.tsx": "Card component for individual cosmetic items showing name, price badge, sparkles icon placeholder, and either a purchase button or 'Already Owned' indicator based on ownership status.",
+  "frontend/src/components/OwnedItemsView.tsx": "View displaying all owned cosmetic items in a responsive grid with sparkles placeholders, loading skeletons, and empty state message when no items are owned.",
+  "frontend/src/components/PurchaseButton.tsx": "Button component handling item purchases with loading spinner, disabled state for insufficient funds, and shopping bag icon.",
+  "frontend/src/components/ShopInterface.tsx": "Main shop component that displays user balance, available cosmetic items in a responsive grid, and handles loading/error states using React Query hooks.",
+  "frontend/src/hooks/useActor.ts": "Custom hook that creates and manages the backend actor instance based on Internet Identity authentication state, invalidating dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides Internet Identity authentication context and hooks for login/logout functionality, managing identity state and AuthClient lifecycle with configurable options.",
+  "frontend/src/hooks/useQueries.ts": "Defines React Query hooks for all backend operations including balance, items, purchases, and admin functions with automatic cache invalidation and toast notifications.",
+  "frontend/src/index.css": "Tailwind CSS configuration with custom OKLCH color palette featuring warm coral/peach tones for light mode and rose gold accents for dark mode.",
+  "frontend/src/main.tsx": "Application entry point that sets up React Query client and Internet Identity provider wrappers around the main App component.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with custom colors using OKLCH format, border radius variables, glow shadows, and animation keyframes for UI components.",
+  "project_state.json": "Project metadata tracking implemented features including purchase system, shop interface, admin code (2807), owned items tab, and Gorilla Tag cosmetics theming."
+}

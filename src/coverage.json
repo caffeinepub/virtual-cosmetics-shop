@@ -1,0 +1,56 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-23T22:59:42.472Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-11",
+        "summary": "Replace the existing cosmetic items catalog with approximately 50 Gorilla Tag themed cosmetics including finger painter, AA badge, illustrator badge, stick, forest guide, and other iconic items from the game",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Update the frontend shop interface to display the new Gorilla Tag themed cosmetics with appropriate styling and imagery",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CosmeticItem.tsx",
+          "frontend/src/components/ShopInterface.tsx",
+          "frontend/src/components/OwnedItemsView.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CosmeticItem.tsx",
+          "frontend/src/components/ShopInterface.tsx",
+          "frontend/src/components/OwnedItemsView.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/CosmeticItem.tsx",
+    "frontend/src/components/OwnedItemsView.tsx",
+    "frontend/src/components/ShopInterface.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

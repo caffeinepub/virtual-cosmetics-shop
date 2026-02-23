@@ -1,0 +1,34 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Replace generic cosmetics with Gorilla Tag themed items",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "summary": "Update the frontend shop interface to display the new Gorilla Tag themed cosmetics with appropriate styling and imagery",
+      "acceptanceCriteria": [
+        "Shop interface displays all approximately 50 Gorilla Tag cosmetic items",
+        "Each item card shows the Gorilla Tag themed name",
+        "Visual presentation is consistent with existing shop layout",
+        "Items maintain purchase functionality and owned status indicators"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CosmeticItem.tsx",
+          "operation": "modify",
+          "description": "Update the cosmetic item card component to properly display Gorilla Tag themed item names and maintain existing purchase/ownership functionality. Ensure the component handles the new item names gracefully while preserving the purchase button logic and 'Already Owned' indicator based on ownership status."
+        },
+        {
+          "path": "frontend/src/components/ShopInterface.tsx",
+          "operation": "modify",
+          "description": "Update the shop interface to ensure it properly renders all approximately 50 Gorilla Tag cosmetic items in the responsive grid layout. Verify the component continues to use the useQueries hooks for fetching available items and maintains the loading/error state handling. Ensure the balance display and overall shop layout remain consistent."
+        },
+        {
+          "path": "frontend/src/components/OwnedItemsView.tsx",
+          "operation": "modify",
+          "description": "Update the owned items view to properly display Gorilla Tag themed cosmetic names when showing the user's inventory. Ensure the responsive grid layout handles the new item names and maintains the empty state message when no items are owned."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-23T22:59:42.469Z",
+  "summary": "The diff implements REQ-11 and REQ-12 to replace generic cosmetics with Gorilla Tag themed items. The backend now contains 50 Gorilla Tag themed items (including finger painter, AA badge, illustrator badge, forest guide, stick, and many others) with varied pricing. The frontend shop interface displays these items with appropriate Gorilla Tag themed names and maintains the existing purchase functionality and owned status indicators. However, there is a discrepancy regarding the price point constraint.",
+  "missing_requirements": [
+    {
+      "id": "REQ-11",
+      "requirement": "Each item maintains the existing £10 price point",
+      "reason": "The BuildRequest explicitly constrains all cosmetic items to maintain the £10 price point, but the backend implementation introduces varied pricing (ranging from £10 to £200) for the Gorilla Tag items",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Variable pricing system for cosmetic items with prices ranging from £10 to £200",
+      "reason": "The BuildRequest constraints explicitly state 'Maintain the existing £10 price point for all cosmetic items', but the implementation introduces a prices array with varied values (30, 50, 80, 120, 200, 15, etc.) instead of uniform £10 pricing",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.95,
+  "changed_files": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "frontend-file-summaries.txt",
+    "frontend/src/components/CosmeticItem.tsx",
+    "frontend/src/components/OwnedItemsView.tsx",
+    "frontend/src/components/ShopInterface.tsx",
+    "project_state.json"
+  ]
+}

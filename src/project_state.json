@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Virtual shopping app with £100 starting balance, Gorilla Tag cosmetics (approximately 50 items including finger painter, AA badge, illustrator badge, stick, forest guide, etc.) for £10 each, secret admin code (2807) for £50,000,000, and automatic £100 income every 10 minutes",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-implement-a-purchase-system-allowing-users-to-buy-cosmetic-items-if-they-have-sufficient-balance",
+      "title": "Implement a purchase system allowing users to buy cosmetic items if they have sufficient balance",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-a-shopping-interface-showing-cosmetic-items-with-their-prices-and-the-user-s-current-balance",
+      "title": "Display a shopping interface showing cosmetic items with their prices and the user's current balance",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-secret-admin-interface-at-the-bottom-of-the-page-that-accepts-code-2807-to-grant-50-000-000",
+      "title": "Create a secret admin interface at the bottom of the page that accepts code 2807 to grant £50,000,000",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-creative-coherent-visual-theme-with-distinct-style-and-color-palette-avoiding-blue-and-purple-throughout-the-entire-shopping-interface-including-typography-layout-and-interactive-elements",
+      "title": "Apply a creative, coherent visual theme with distinct style and color palette (avoiding blue and purple) throughout the entire shopping interface including typography, layout, and interactive elements",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-tab-labeled-owned-items-in-the-top-right-section-of-the-interface-that-displays-all-cosmetic-items-the-user-has-purchased",
+      "title": "Add a tab labeled 'Owned Items' in the top right section of the interface that displays all cosmetic items the user has purchased",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-already-owned-status-on-items-in-the-shop-interface-that-the-user-has-already-purchased-replacing-or-modifying-the-purchase-button",
+      "title": "Display 'Already Owned' status on items in the shop interface that the user has already purchased, replacing or modifying the purchase button",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-frontend-shop-interface-to-display-the-new-gorilla-tag-themed-cosmetics-with-appropriate-styling-and-imagery",
+      "title": "Update the frontend shop interface to display the new Gorilla Tag themed cosmetics with appropriate styling and imagery",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Virtual currency system starting at £100",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Cosmetic items shop with £10 price per item",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Secret admin code (2807) that grants £50,000,000",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Automatic income of £100 every 10 minutes",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Implement a user currency system where each user starts with £100 balance stored in the backend",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Create a cosmetic items catalog where each item costs £10",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Implement automatic income system that grants users £100 every 10 minutes",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Add 'Owned Items' tab in top right showing purchased items",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Mark purchased items as 'Already Owned' in shop interface",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Extend the backend to track and return which items each user has purchased so the frontend can determine ownership status",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Replace generic cosmetics with approximately 50 Gorilla Tag cosmetics (finger painter, AA badge, illustrator badge, stick, forest guide, etc.)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Replace the existing cosmetic items catalog with approximately 50 Gorilla Tag themed cosmetics including finger painter, AA badge, illustrator badge, stick, forest guide, and other iconic items from the game",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Virtual Cosmetics Shop",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,12 @@
+{
+  "frontend/src/App.tsx": "Main application component with tab navigation between Shop and Owned Items views, includes header with tab buttons, footer with admin box and attribution.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hooks for all backend operations including user initialization, balance fetching, item listing, owned items retrieval, purchasing with automatic cache invalidation for both balance and owned items, and admin fund grants with toast notifications.",
+  "frontend/src/components/ShopInterface.tsx": "Main shop component that displays the user's balance and a responsive grid of Gorilla Tag cosmetic items with ownership status, loading states, error handling, and updated header text.",
+  "frontend/src/components/BalanceDisplay.tsx": "Displays the user's current balance in a prominent card with currency icon and gradient styling.",
+  "frontend/src/components/CosmeticItem.tsx": "Individual cosmetic item card showing Gorilla Tag themed product name, price badge, sparkles icon placeholder, and either a purchase button or \"Already Owned\" indicator based on ownership status.",
+  "frontend/src/components/PurchaseButton.tsx": "Purchase button component that handles item purchases with loading states and disables when user has insufficient funds.",
+  "frontend/src/components/AdminBox.tsx": "Discreet admin code input at the footer that accepts code 2807 to grant funds, with subtle styling that becomes visible on hover.",
+  "frontend/src/index.css": "Global styles with warm coral, peach, and rose gold OKLCH color palette for both light and dark modes, avoiding blue and purple tones.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended color tokens, custom border radius values, glow shadows, and typography settings for the cosmetics shop theme.",
+  "frontend/src/components/OwnedItemsView.tsx": "Displays all Gorilla Tag cosmetic items the user has purchased in a responsive grid with sparkles icon placeholders, shows empty state when no items are owned."
+}
