@@ -2,12 +2,26 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-frontend-shop-interface-to-display-the-new-gorilla-tag-themed-cosmetics-with-appropriate-styling-and-imagery",
-      "featureTitle": "Update the frontend shop interface to display the new Gorilla Tag themed cosmetics with appropriate styling and imagery",
+      "featureId": "feature-generate-product-images-for-all-50-gorilla-tag-cosmetic-items-currently-defined-in-the-backend-matching-each-item-s-name-and-visual-description",
+      "featureTitle": "Generate product images for all 50 Gorilla Tag cosmetic items currently defined in the backend, matching each item's name and visual description",
+      "files": [],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-cosmeticitem-component-to-display-the-generated-product-image-below-the-item-name-in-the-designated-space-replacing-the-sparkles-icon-placeholder",
+      "featureTitle": "Update the CosmeticItem component to display the generated product image below the item name in the designated space, replacing the sparkles icon placeholder",
       "files": [
-        "frontend/src/components/CosmeticItem.tsx",
-        "frontend/src/components/OwnedItemsView.tsx",
-        "frontend/src/components/ShopInterface.tsx"
+        "frontend/src/components/CosmeticItem.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -17,7 +31,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-12"
+        "REQ-18"
       ],
       "confidence": "high"
     }

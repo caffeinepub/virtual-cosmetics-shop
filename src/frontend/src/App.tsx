@@ -20,7 +20,7 @@ function App() {
   }, [initializeUser, isPending, isSuccess]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-accent/5 to-secondary/10">
+    <div className="min-h-screen bg-gradient-to-br from-background via-accent/5 to-secondary/10 flex flex-col">
       <header className="border-b border-border/40 bg-card/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
@@ -50,11 +50,11 @@ function App() {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 flex-1">
         {activeTab === 'shop' ? <ShopInterface /> : <OwnedItemsView />}
       </main>
 
-      <footer className="border-t border-border/40 bg-card/60 backdrop-blur-sm mt-16">
+      <footer className="border-t border-border/40 bg-card/60 backdrop-blur-sm mt-auto">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col items-center justify-center gap-4">
             <AdminBox />

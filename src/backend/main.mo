@@ -5,9 +5,7 @@ import Principal "mo:core/Principal";
 import Array "mo:core/Array";
 import Runtime "mo:core/Runtime";
 import Iter "mo:core/Iter";
-import Migration "migration";
 
-(with migration = Migration.run)
 actor {
   type Balance = Nat;
   type ItemId = Nat;
@@ -149,6 +147,10 @@ actor {
       case (null) { [] };
       case (?userState) { userState.inventory };
     };
+  };
+
+  public query func getAllItems() : async [Item] {
+    items.values().toArray();
   };
 
   do {

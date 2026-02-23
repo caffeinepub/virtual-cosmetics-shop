@@ -16,6 +16,7 @@ export interface Item { 'id' : ItemId, 'name' : string, 'price' : Balance }
 export type ItemId = bigint;
 export interface _SERVICE {
   'adminGrantFunds' : ActorMethod<[bigint], undefined>,
+  'getAllItems' : ActorMethod<[], Array<Item>>,
   'getAvailableItems' : ActorMethod<[], Array<Item>>,
   'getBalance' : ActorMethod<[], Balance>,
   'getCategories' : ActorMethod<[], Array<Category>>,

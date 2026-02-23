@@ -38,6 +38,20 @@ export function useBalance() {
   });
 }
 
+export function useGetItems() {
+  const { actor, isFetching } = useActor();
+
+  return useQuery<Item[]>({
+    queryKey: ['items'],
+    queryFn: async () => {
+      if (!actor) return [];
+      const items = await actor.getAllItems();
+      return items;
+    },
+    enabled: !!actor && !isFetching,
+  });
+}
+
 export function useAvailableItems() {
   const { actor, isFetching } = useActor();
 
@@ -45,7 +59,8 @@ export function useAvailableItems() {
     queryKey: ['items'],
     queryFn: async () => {
       if (!actor) return [];
-      return await actor.getAvailableItems();
+      const items = await actor.getAllItems();
+      return items;
     },
     enabled: !!actor && !isFetching,
   });
@@ -105,8 +120,9 @@ export function useAdminGrantFunds() {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['balance'] });
+      queryClient.invalidateQueries({ queryKey: ['ownedItems'] });
       toast.success('Admin code accepted!', {
-        description: 'Your balance has been updated.',
+        description: 'Your balance has been updated to £50,000,000.',
       });
     },
     onError: () => {

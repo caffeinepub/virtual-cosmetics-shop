@@ -102,6 +102,7 @@ export interface Category {
 export type ItemId = bigint;
 export interface backendInterface {
     adminGrantFunds(code: bigint): Promise<void>;
+    getAllItems(): Promise<Array<Item>>;
     getAvailableItems(): Promise<Array<Item>>;
     getBalance(): Promise<Balance>;
     getCategories(): Promise<Array<Category>>;
@@ -125,6 +126,20 @@ export class Backend implements backendInterface {
             }
         } else {
             const result = await this.actor.adminGrantFunds(arg0);
+            return result;
+        }
+    }
+    async getAllItems(): Promise<Array<Item>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.getAllItems();
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.getAllItems();
             return result;
         }
     }

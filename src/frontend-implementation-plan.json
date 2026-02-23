@@ -1,32 +1,283 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace generic cosmetics with Gorilla Tag themed items",
+  "title": "Add product images for all 50 Gorilla Tag cosmetic items",
   "requirements": [
     {
-      "id": "REQ-12",
-      "summary": "Update the frontend shop interface to display the new Gorilla Tag themed cosmetics with appropriate styling and imagery",
+      "id": "REQ-17",
+      "summary": "Generate product images for all 50 Gorilla Tag cosmetic items matching each item's name and visual description",
       "acceptanceCriteria": [
-        "Shop interface displays all approximately 50 Gorilla Tag cosmetic items",
-        "Each item card shows the Gorilla Tag themed name",
-        "Visual presentation is consistent with existing shop layout",
-        "Items maintain purchase functionality and owned status indicators"
+        "Each of the 50 cosmetic items has a corresponding product image",
+        "Image filenames follow the pattern: {item-name-slug}.dim_400x400.png",
+        "All images are visually consistent in style and dimensions"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/finger-painter.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Finger Painter cosmetic item showing paintbrush or painting motif as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/aa-badge.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for AA Badge cosmetic item showing badge design as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/illustrator-badge.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Illustrator Badge cosmetic item showing illustrator badge design as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/stick.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Stick cosmetic item showing wooden stick as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/forest-guide.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Forest Guide cosmetic item showing forest guide character or emblem as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/golden-banana.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Golden Banana cosmetic item showing golden banana as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/crystal-crown.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Crystal Crown cosmetic item showing crystal crown as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/lava-rock.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Lava Rock cosmetic item showing lava rock as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/ice-shard.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Ice Shard cosmetic item showing ice shard as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/rainbow-trail.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Rainbow Trail cosmetic item showing rainbow trail effect as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/neon-gloves.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Neon Gloves cosmetic item showing neon gloves as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/leaf-cape.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Leaf Cape cosmetic item showing leaf cape as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/moon-badge.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Moon Badge cosmetic item showing moon badge as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/star-badge.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Star Badge cosmetic item showing star badge as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/cloud-hat.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Cloud Hat cosmetic item showing cloud hat as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/fire-wings.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Fire Wings cosmetic item showing fire wings as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/water-droplet.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Water Droplet cosmetic item showing water droplet as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/thunder-bolt.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Thunder Bolt cosmetic item showing thunder bolt as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/earth-stone.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Earth Stone cosmetic item showing earth stone as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/wind-feather.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Wind Feather cosmetic item showing wind feather as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/shadow-mask.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Shadow Mask cosmetic item showing shadow mask as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/light-halo.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Light Halo cosmetic item showing light halo as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/jungle-vine.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Jungle Vine cosmetic item showing jungle vine as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/beach-ball.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Beach Ball cosmetic item showing beach ball as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/mountain-peak.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Mountain Peak cosmetic item showing mountain peak as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/desert-sand.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Desert Sand cosmetic item showing desert sand effect as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/ocean-wave.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Ocean Wave cosmetic item showing ocean wave as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/volcano-ash.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Volcano Ash cosmetic item showing volcano ash effect as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/arctic-frost.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Arctic Frost cosmetic item showing arctic frost effect as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/tropical-flower.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Tropical Flower cosmetic item showing tropical flower as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/canyon-rock.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Canyon Rock cosmetic item showing canyon rock as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/coral-reef.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Coral Reef cosmetic item showing coral reef as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/bamboo-stick.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Bamboo Stick cosmetic item showing bamboo stick as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/cherry-blossom.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Cherry Blossom cosmetic item showing cherry blossom as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/pine-cone.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Pine Cone cosmetic item showing pine cone as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/maple-leaf.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Maple Leaf cosmetic item showing maple leaf as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/cactus-spike.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Cactus Spike cosmetic item showing cactus spike as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/mushroom-cap.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Mushroom Cap cosmetic item showing mushroom cap as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/snowflake.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Snowflake cosmetic item showing snowflake as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/sunbeam.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Sunbeam cosmetic item showing sunbeam effect as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/moonbeam.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Moonbeam cosmetic item showing moonbeam effect as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/starlight.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Starlight cosmetic item showing starlight effect as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/aurora.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Aurora cosmetic item showing aurora effect as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/meteor.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Meteor cosmetic item showing meteor as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/comet.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Comet cosmetic item showing comet as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/galaxy-swirl.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Galaxy Swirl cosmetic item showing galaxy swirl effect as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/nebula-cloud.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Nebula Cloud cosmetic item showing nebula cloud as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/black-hole.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Black Hole cosmetic item showing black hole effect as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/supernova.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Supernova cosmetic item showing supernova effect as a static asset"
+        },
+        {
+          "path": "frontend/public/assets/generated/cosmic-dust.dim_400x400.png",
+          "operation": "create",
+          "description": "Generate product image for Cosmic Dust cosmetic item showing cosmic dust effect as a static asset"
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Update CosmeticItem component to display generated product images below item name, replacing the sparkles icon placeholder",
+      "acceptanceCriteria": [
+        "Product images render below the cosmetic item name",
+        "Images are properly sized and styled to fit the card layout",
+        "Images load from frontend/public/assets/generated directory",
+        "Fallback handling exists if an image fails to load"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/CosmeticItem.tsx",
           "operation": "modify",
-          "description": "Update the cosmetic item card component to properly display Gorilla Tag themed item names and maintain existing purchase/ownership functionality. Ensure the component handles the new item names gracefully while preserving the purchase button logic and 'Already Owned' indicator based on ownership status."
-        },
-        {
-          "path": "frontend/src/components/ShopInterface.tsx",
-          "operation": "modify",
-          "description": "Update the shop interface to ensure it properly renders all approximately 50 Gorilla Tag cosmetic items in the responsive grid layout. Verify the component continues to use the useQueries hooks for fetching available items and maintains the loading/error state handling. Ensure the balance display and overall shop layout remain consistent."
-        },
-        {
-          "path": "frontend/src/components/OwnedItemsView.tsx",
-          "operation": "modify",
-          "description": "Update the owned items view to properly display Gorilla Tag themed cosmetic names when showing the user's inventory. Ensure the responsive grid layout handles the new item names and maintains the empty state message when no items are owned."
+          "description": "Replace the sparkles icon placeholder with an img element that loads the product image from frontend/public/assets/generated using a slug derived from the item name. Add proper sizing, styling to fit the card layout maintaining the warm coral/peach theme, and fallback handling if the image fails to load. Ensure the image renders below the item name in the designated space."
         }
       ]
     }

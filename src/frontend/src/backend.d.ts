@@ -20,6 +20,7 @@ export interface Category {
 export type ItemId = bigint;
 export interface backendInterface {
     adminGrantFunds(code: bigint): Promise<void>;
+    getAllItems(): Promise<Array<Item>>;
     getAvailableItems(): Promise<Array<Item>>;
     getBalance(): Promise<Balance>;
     getCategories(): Promise<Array<Category>>;

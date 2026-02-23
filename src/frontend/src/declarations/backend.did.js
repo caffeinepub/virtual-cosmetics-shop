@@ -19,6 +19,7 @@ export const Category = IDL.Record({ 'id' : IDL.Nat, 'name' : IDL.Text });
 
 export const idlService = IDL.Service({
   'adminGrantFunds' : IDL.Func([IDL.Nat], [], []),
+  'getAllItems' : IDL.Func([], [IDL.Vec(Item)], ['query']),
   'getAvailableItems' : IDL.Func([], [IDL.Vec(Item)], ['query']),
   'getBalance' : IDL.Func([], [Balance], ['query']),
   'getCategories' : IDL.Func([], [IDL.Vec(Category)], ['query']),
@@ -43,6 +44,7 @@ export const idlFactory = ({ IDL }) => {
   
   return IDL.Service({
     'adminGrantFunds' : IDL.Func([IDL.Nat], [], []),
+    'getAllItems' : IDL.Func([], [IDL.Vec(Item)], ['query']),
     'getAvailableItems' : IDL.Func([], [IDL.Vec(Item)], ['query']),
     'getBalance' : IDL.Func([], [Balance], ['query']),
     'getCategories' : IDL.Func([], [IDL.Vec(Category)], ['query']),
