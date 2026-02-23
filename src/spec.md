@@ -1,11 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Add product images for all 50 Gorilla Tag cosmetic items in the shop.
+**Goal:** Fix image loading failures in the shop interface so all 50 cosmetic items display correctly.
 
 **Planned changes:**
-- Generate 50 product images (400x400px) for each cosmetic item matching their names and descriptions
-- Update CosmeticItem component to display product images below item names, replacing the sparkles icon placeholder
-- Store images in frontend/public/assets/generated directory
+- Debug and fix the image loading mechanism in CosmeticItem component
+- Verify all 50 cosmetic item images exist in frontend/public/assets/generated directory
+- Ensure the slug mapping function correctly converts item names to image filenames
+- Fix any broken image path references causing "Failed to load" errors
 
-**User-visible outcome:** Each cosmetic item in the shop displays a unique product image below its name, making items more visually appealing and easier to identify.
+**User-visible outcome:** All cosmetic items in the shop display their proper images without any "Failed to load" errors, and the fallback icon only appears for genuinely missing images.

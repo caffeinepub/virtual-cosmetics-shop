@@ -2,24 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-generate-product-images-for-all-50-gorilla-tag-cosmetic-items-currently-defined-in-the-backend-matching-each-item-s-name-and-visual-description",
-      "featureTitle": "Generate product images for all 50 Gorilla Tag cosmetic items currently defined in the backend, matching each item's name and visual description",
-      "files": [],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-17"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-cosmeticitem-component-to-display-the-generated-product-image-below-the-item-name-in-the-designated-space-replacing-the-sparkles-icon-placeholder",
-      "featureTitle": "Update the CosmeticItem component to display the generated product image below the item name in the designated space, replacing the sparkles icon placeholder",
+      "featureId": "feature-debug-and-fix-the-image-loading-mechanism-in-cosmeticitem-component-to-ensure-all-product-images-load-correctly-from-assets-generated-directory-without-displaying-failed-to-load-errors",
+      "featureTitle": "Debug and fix the image loading mechanism in CosmeticItem component to ensure all product images load correctly from /assets/generated directory without displaying 'Failed to load' errors",
       "files": [
         "frontend/src/components/CosmeticItem.tsx"
       ],
@@ -31,7 +15,44 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-18"
+        "REQ-19"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-verify-that-all-50-generated-cosmetic-item-images-exist-in-frontend-public-assets-generated-directory-with-correct-filenames-matching-the-slug-mapping-pattern-used-by-cosmeticitem-component",
+      "featureTitle": "Verify that all 50 generated cosmetic item images exist in frontend/public/assets/generated directory with correct filenames matching the slug mapping pattern used by CosmeticItem component",
+      "files": [
+        "frontend/src/components/CosmeticItem.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-20"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-image-slug-mapping-function-in-cosmeticitem-and-owneditemsview-components-correctly-converts-all-50-gorilla-tag-cosmetic-item-names-to-their-corresponding-image-filenames",
+      "featureTitle": "Ensure the image slug mapping function in CosmeticItem and OwnedItemsView components correctly converts all 50 Gorilla Tag cosmetic item names to their corresponding image filenames",
+      "files": [
+        "frontend/src/components/CosmeticItem.tsx",
+        "frontend/src/components/OwnedItemsView.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-21"
       ],
       "confidence": "high"
     }

@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 11,
+  "projectStateVersion": 13,
   "summary": "Virtual shopping app with £100 starting balance, Gorilla Tag cosmetics (approximately 50 items including finger painter, AA badge, illustrator badge, stick, forest guide, etc.) for £10 each, secret admin code (2807) for £50,000,000, and automatic £100 income every 10 minutes",
   "architectural_notes": [],
   "known_issues": [
     "Gorilla Tag cosmetic items are not loading in the shop interface",
-    "Mod panel (secret admin interface) is not appearing on the page"
+    "Mod panel (secret admin interface) is not appearing on the page",
+    "Images are failing to load in the shop interface"
   ],
   "isFixRequest": true,
-  "imageRequirements": "## Required Images\n- Finger Painter cosmetic item product image showing paintbrush or painting motif (finger-painter.dim_400x400.png)\n- AA Badge cosmetic item product image showing badge design (aa-badge.dim_400x400.png)\n- Illustrator Badge cosmetic item product image showing illustrator badge design (illustrator-badge.dim_400x400.png)\n- Stick cosmetic item product image showing wooden stick (stick.dim_400x400.png)\n- Forest Guide cosmetic item product image showing forest guide character or emblem (forest-guide.dim_400x400.png)\n- Golden Banana cosmetic item product image showing golden banana (golden-banana.dim_400x400.png)\n- Crystal Crown cosmetic item product image showing crystal crown (crystal-crown.dim_400x400.png)\n- Lava Rock cosmetic item product image showing lava rock (lava-rock.dim_400x400.png)\n- Ice Shard cosmetic item product image showing ice shard (ice-shard.dim_400x400.png)\n- Rainbow Trail cosmetic item product image showing rainbow trail effect (rainbow-trail.dim_400x400.png)\n- Neon Gloves cosmetic item product image showing neon gloves (neon-gloves.dim_400x400.png)\n- Leaf Cape cosmetic item product image showing leaf cape (leaf-cape.dim_400x400.png)\n- Moon Badge cosmetic item product image showing moon badge (moon-badge.dim_400x400.png)\n- Star Badge cosmetic item product image showing star badge (star-badge.dim_400x400.png)\n- Cloud Hat cosmetic item product image showing cloud hat (cloud-hat.dim_400x400.png)\n- Fire Wings cosmetic item product image showing fire wings (fire-wings.dim_400x400.png)\n- Water Droplet cosmetic item product image showing water droplet (water-droplet.dim_400x400.png)\n- Thunder Bolt cosmetic item product image showing thunder bolt (thunder-bolt.dim_400x400.png)\n- Earth Stone cosmetic item product image showing earth stone (earth-stone.dim_400x400.png)\n- Wind Feather cosmetic item product image showing wind feather (wind-feather.dim_400x400.png)\n- Shadow Mask cosmetic item product image showing shadow mask (shadow-mask.dim_400x400.png)\n- Light Halo cosmetic item product image showing light halo (light-halo.dim_400x400.png)\n- Jungle Vine cosmetic item product image showing jungle vine (jungle-vine.dim_400x400.png)\n- Beach Ball cosmetic item product image showing beach ball (beach-ball.dim_400x400.png)\n- Mountain Peak cosmetic item product image showing mountain peak (mountain-peak.dim_400x400.png)\n- Desert Sand cosmetic item product image showing desert sand effect (desert-sand.dim_400x400.png)\n- Ocean Wave cosmetic item product image showing ocean wave (ocean-wave.dim_400x400.png)\n- Volcano Ash cosmetic item product image showing volcano ash effect (volcano-ash.dim_400x400.png)\n- Arctic Frost cosmetic item product image showing arctic frost effect (arctic-frost.dim_400x400.png)\n- Tropical Flower cosmetic item product image showing tropical flower (tropical-flower.dim_400x400.png)\n- Canyon Rock cosmetic item product image showing canyon rock (canyon-rock.dim_400x400.png)\n- Coral Reef cosmetic item product image showing coral reef (coral-reef.dim_400x400.png)\n- Bamboo Stick cosmetic item product image showing bamboo stick (bamboo-stick.dim_400x400.png)\n- Cherry Blossom cosmetic item product image showing cherry blossom (cherry-blossom.dim_400x400.png)\n- Pine Cone cosmetic item product image showing pine cone (pine-cone.dim_400x400.png)\n- Maple Leaf cosmetic item product image showing maple leaf (maple-leaf.dim_400x400.png)\n- Cactus Spike cosmetic item product image showing cactus spike (cactus-spike.dim_400x400.png)\n- Mushroom Cap cosmetic item product image showing mushroom cap (mushroom-cap.dim_400x400.png)\n- Snowflake cosmetic item product image showing snowflake (snowflake.dim_400x400.png)\n- Sunbeam cosmetic item product image showing sunbeam effect (sunbeam.dim_400x400.png)\n- Moonbeam cosmetic item product image showing moonbeam effect (moonbeam.dim_400x400.png)\n- Starlight cosmetic item product image showing starlight effect (starlight.dim_400x400.png)\n- Aurora cosmetic item product image showing aurora effect (aurora.dim_400x400.png)\n- Meteor cosmetic item product image showing meteor (meteor.dim_400x400.png)\n- Comet cosmetic item product image showing comet (comet.dim_400x400.png)\n- Galaxy Swirl cosmetic item product image showing galaxy swirl effect (galaxy-swirl.dim_400x400.png)\n- Nebula Cloud cosmetic item product image showing nebula cloud (nebula-cloud.dim_400x400.png)\n- Black Hole cosmetic item product image showing black hole effect (black-hole.dim_400x400.png)\n- Supernova cosmetic item product image showing supernova effect (supernova.dim_400x400.png)\n- Cosmic Dust cosmetic item product image showing cosmic dust effect (cosmic-dust.dim_400x400.png)",
   "existing_features": [
     {
       "id": "feature-implement-a-purchase-system-allowing-users-to-buy-cosmetic-items-if-they-have-sufficient-balance",
@@ -103,6 +103,30 @@
       "title": "Update the CosmeticItem component to display the generated product image below the item name in the designated space, replacing the sparkles icon placeholder",
       "reqIds": [
         "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-debug-and-fix-the-image-loading-mechanism-in-cosmeticitem-component-to-ensure-all-product-images-load-correctly-from-assets-generated-directory-without-displaying-failed-to-load-errors",
+      "title": "Debug and fix the image loading mechanism in CosmeticItem component to ensure all product images load correctly from /assets/generated directory without displaying 'Failed to load' errors",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-verify-that-all-50-generated-cosmetic-item-images-exist-in-frontend-public-assets-generated-directory-with-correct-filenames-matching-the-slug-mapping-pattern-used-by-cosmeticitem-component",
+      "title": "Verify that all 50 generated cosmetic item images exist in frontend/public/assets/generated directory with correct filenames matching the slug mapping pattern used by CosmeticItem component",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-image-slug-mapping-function-in-cosmeticitem-and-owneditemsview-components-correctly-converts-all-50-gorilla-tag-cosmetic-item-names-to-their-corresponding-image-filenames",
+      "title": "Ensure the image slug mapping function in CosmeticItem and OwnedItemsView components correctly converts all 50 Gorilla Tag cosmetic item names to their corresponding image filenames",
+      "reqIds": [
+        "REQ-21"
       ],
       "version": 1
     }

@@ -1,109 +1,83 @@
 {
   "kind": "build_request",
-  "title": "Add product images for all 50 Gorilla Tag cosmetic items",
-  "priority": "normal",
+  "title": "Fix image loading failure in shop interface",
+  "projectName": "Virtual Cosmetics Shop",
+  "priority": "high",
   "requirements": [
     {
-      "id": "REQ-17",
-      "text": "Generate product images for all 50 Gorilla Tag cosmetic items currently defined in the backend, matching each item's name and visual description",
+      "id": "REQ-19",
+      "text": "Debug and fix the image loading mechanism in CosmeticItem component to ensure all product images load correctly from /assets/generated directory without displaying 'Failed to load' errors",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-latest"
+          "msg-recent"
         ],
         "quotes": [
-          "For every cosmetic find a photo of them online and put it underneath them in the space provided"
+          "Fix the failed to load problem now"
         ]
       },
       "acceptanceCriteria": [
-        "Each of the 50 cosmetic items has a corresponding product image",
-        "Image filenames follow the pattern: {item-name-slug}.dim_400x400.png",
-        "All images are visually consistent in style and dimensions"
+        "All 50 cosmetic item images display correctly in the shop grid",
+        "No 'Failed to load' errors appear on any cosmetic items",
+        "Fallback sparkles icon only appears if image genuinely does not exist",
+        "Image paths correctly resolve to /assets/generated with proper filename mapping"
       ]
     },
     {
-      "id": "REQ-18",
-      "text": "Update the CosmeticItem component to display the generated product image below the item name in the designated space, replacing the sparkles icon placeholder",
+      "id": "REQ-20",
+      "text": "Verify that all 50 generated cosmetic item images exist in frontend/public/assets/generated directory with correct filenames matching the slug mapping pattern used by CosmeticItem component",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-latest"
+          "msg-recent"
         ],
         "quotes": [
-          "put it underneath them in the space provided"
+          "Fix the failed to load problem now"
         ]
       },
       "acceptanceCriteria": [
-        "Product images render below the cosmetic item name",
-        "Images are properly sized and styled to fit the card layout",
-        "Images load from frontend/public/assets/generated directory",
-        "Fallback handling exists if an image fails to load"
+        "All expected image files are present in the correct directory",
+        "Filenames follow the slug pattern derived from item names",
+        "Image dimensions match the expected format (e.g., dim_400x400)",
+        "No broken image references in the component code"
+      ]
+    },
+    {
+      "id": "REQ-21",
+      "text": "Ensure the image slug mapping function in CosmeticItem and OwnedItemsView components correctly converts all 50 Gorilla Tag cosmetic item names to their corresponding image filenames",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Fix the failed to load problem now"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Slug generation handles special characters, spaces, and capitalization correctly",
+        "All item names map to valid image filenames",
+        "The mapping is consistent across both Shop and Owned Items views",
+        "Edge cases like items with apostrophes or special symbols are handled properly"
       ]
     }
   ],
   "constraints": [
-    "Images must be stored in frontend/public/assets/generated as static assets",
-    "Do not route images through the backend",
-    "Maintain the existing warm coral/peach/rose gold visual theme"
+    "Do not modify the backend Motoko code",
+    "Do not change the Internet Identity integration in frontend/src/hooks/useInternetIdentity.ts",
+    "Do not alter the main.tsx entry point",
+    "Preserve the existing warm coral/peach color theme",
+    "Keep the image directory at frontend/public/assets/generated"
   ],
   "nonGoals": [
-    "Changing the cosmetic item data structure in the backend",
-    "Modifying the pricing or purchase logic",
-    "Altering the overall layout of the shop grid"
+    "Adding new cosmetic items beyond the existing 50",
+    "Changing the price structure or currency system",
+    "Modifying the admin code functionality",
+    "Altering the automatic income distribution system",
+    "Redesigning the shop layout or visual theme"
   ],
   "imageRequirements": {
-    "required": [
-      "Finger Painter cosmetic item product image showing paintbrush or painting motif (finger-painter.dim_400x400.png)",
-      "AA Badge cosmetic item product image showing badge design (aa-badge.dim_400x400.png)",
-      "Illustrator Badge cosmetic item product image showing illustrator badge design (illustrator-badge.dim_400x400.png)",
-      "Stick cosmetic item product image showing wooden stick (stick.dim_400x400.png)",
-      "Forest Guide cosmetic item product image showing forest guide character or emblem (forest-guide.dim_400x400.png)",
-      "Golden Banana cosmetic item product image showing golden banana (golden-banana.dim_400x400.png)",
-      "Crystal Crown cosmetic item product image showing crystal crown (crystal-crown.dim_400x400.png)",
-      "Lava Rock cosmetic item product image showing lava rock (lava-rock.dim_400x400.png)",
-      "Ice Shard cosmetic item product image showing ice shard (ice-shard.dim_400x400.png)",
-      "Rainbow Trail cosmetic item product image showing rainbow trail effect (rainbow-trail.dim_400x400.png)",
-      "Neon Gloves cosmetic item product image showing neon gloves (neon-gloves.dim_400x400.png)",
-      "Leaf Cape cosmetic item product image showing leaf cape (leaf-cape.dim_400x400.png)",
-      "Moon Badge cosmetic item product image showing moon badge (moon-badge.dim_400x400.png)",
-      "Star Badge cosmetic item product image showing star badge (star-badge.dim_400x400.png)",
-      "Cloud Hat cosmetic item product image showing cloud hat (cloud-hat.dim_400x400.png)",
-      "Fire Wings cosmetic item product image showing fire wings (fire-wings.dim_400x400.png)",
-      "Water Droplet cosmetic item product image showing water droplet (water-droplet.dim_400x400.png)",
-      "Thunder Bolt cosmetic item product image showing thunder bolt (thunder-bolt.dim_400x400.png)",
-      "Earth Stone cosmetic item product image showing earth stone (earth-stone.dim_400x400.png)",
-      "Wind Feather cosmetic item product image showing wind feather (wind-feather.dim_400x400.png)",
-      "Shadow Mask cosmetic item product image showing shadow mask (shadow-mask.dim_400x400.png)",
-      "Light Halo cosmetic item product image showing light halo (light-halo.dim_400x400.png)",
-      "Jungle Vine cosmetic item product image showing jungle vine (jungle-vine.dim_400x400.png)",
-      "Beach Ball cosmetic item product image showing beach ball (beach-ball.dim_400x400.png)",
-      "Mountain Peak cosmetic item product image showing mountain peak (mountain-peak.dim_400x400.png)",
-      "Desert Sand cosmetic item product image showing desert sand effect (desert-sand.dim_400x400.png)",
-      "Ocean Wave cosmetic item product image showing ocean wave (ocean-wave.dim_400x400.png)",
-      "Volcano Ash cosmetic item product image showing volcano ash effect (volcano-ash.dim_400x400.png)",
-      "Arctic Frost cosmetic item product image showing arctic frost effect (arctic-frost.dim_400x400.png)",
-      "Tropical Flower cosmetic item product image showing tropical flower (tropical-flower.dim_400x400.png)",
-      "Canyon Rock cosmetic item product image showing canyon rock (canyon-rock.dim_400x400.png)",
-      "Coral Reef cosmetic item product image showing coral reef (coral-reef.dim_400x400.png)",
-      "Bamboo Stick cosmetic item product image showing bamboo stick (bamboo-stick.dim_400x400.png)",
-      "Cherry Blossom cosmetic item product image showing cherry blossom (cherry-blossom.dim_400x400.png)",
-      "Pine Cone cosmetic item product image showing pine cone (pine-cone.dim_400x400.png)",
-      "Maple Leaf cosmetic item product image showing maple leaf (maple-leaf.dim_400x400.png)",
-      "Cactus Spike cosmetic item product image showing cactus spike (cactus-spike.dim_400x400.png)",
-      "Mushroom Cap cosmetic item product image showing mushroom cap (mushroom-cap.dim_400x400.png)",
-      "Snowflake cosmetic item product image showing snowflake (snowflake.dim_400x400.png)",
-      "Sunbeam cosmetic item product image showing sunbeam effect (sunbeam.dim_400x400.png)",
-      "Moonbeam cosmetic item product image showing moonbeam effect (moonbeam.dim_400x400.png)",
-      "Starlight cosmetic item product image showing starlight effect (starlight.dim_400x400.png)",
-      "Aurora cosmetic item product image showing aurora effect (aurora.dim_400x400.png)",
-      "Meteor cosmetic item product image showing meteor (meteor.dim_400x400.png)",
-      "Comet cosmetic item product image showing comet (comet.dim_400x400.png)",
-      "Galaxy Swirl cosmetic item product image showing galaxy swirl effect (galaxy-swirl.dim_400x400.png)",
-      "Nebula Cloud cosmetic item product image showing nebula cloud (nebula-cloud.dim_400x400.png)",
-      "Black Hole cosmetic item product image showing black hole effect (black-hole.dim_400x400.png)",
-      "Supernova cosmetic item product image showing supernova effect (supernova.dim_400x400.png)",
-      "Cosmic Dust cosmetic item product image showing cosmic dust effect (cosmic-dust.dim_400x400.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }

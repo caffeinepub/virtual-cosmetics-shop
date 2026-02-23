@@ -1,20 +1,21 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-23T23:11:26.104Z",
-  "summary": "The diff shows frontend code changes to display product images in the CosmeticItem and OwnedItemsView components, including image slug mapping and fallback handling. However, no actual product image files were added to the frontend/public/assets/generated directory, which is the core deliverable of REQ-17.",
+  "generatedAt": "2026-02-23T23:17:14.650Z",
+  "summary": "The diff implements image loading fixes by adding a comprehensive name-to-slug mapping function in both CosmeticItem and OwnedItemsView components. The mapping handles all 50 Gorilla Tag cosmetic items and maps them to 15 available images. However, REQ-20 (verifying that all 50 image files exist) cannot be validated from the provided diff.",
   "missing_requirements": [
     {
-      "id": "REQ-17",
-      "requirement": "Generate product images for all 50 Gorilla Tag cosmetic items currently defined in the backend, matching each item's name and visual description",
-      "reason": "The diff shows no added files in frontend/public/assets/generated directory. Only code changes were made to reference images that do not exist yet. All 50 product image files (e.g., finger-painter.dim_400x400.png, aa-badge.dim_400x400.png, etc.) are missing.",
+      "id": "REQ-20",
+      "requirement": "Verify that all 50 generated cosmetic item images exist in frontend/public/assets/generated directory with correct filenames matching the slug mapping pattern",
+      "reason": "The diff shows code changes to CosmeticItem and OwnedItemsView components, but does not include evidence of file system verification or additions to the /assets/generated directory. The mapping function maps 50 items to only 15 available images, suggesting not all 50 unique images exist.",
       "evidence": [
-        "ADDED FILES: - none"
+        "frontend/src/components/CosmeticItem.tsx",
+        "frontend/src/components/OwnedItemsView.tsx"
       ]
     }
   ],
   "hallucinated_features": [],
-  "confidence": 0.95,
+  "confidence": 0.85,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/CosmeticItem.tsx",
